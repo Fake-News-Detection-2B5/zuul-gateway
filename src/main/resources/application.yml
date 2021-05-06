@@ -18,7 +18,7 @@ eureka:
       #defaultZone: http://localhost:8661/eureka
       defaultZone: https://fake-news-eureka-server.herokuapp.com/eureka
   instance:
-    hostname: localhost
+    hostname: fake-news-eureka-server.herokuapp.com
 
 zuul:
   host:
