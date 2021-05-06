@@ -16,7 +16,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       #defaultZone: http://localhost:8661/eureka
-      defaultZone: https://fake-news-eureka-server.herokuapp.com/
+      defaultZone: https://fake-news-eureka-server.herokuapp.com/eureka
   instance:
     hostname: localhost
 
