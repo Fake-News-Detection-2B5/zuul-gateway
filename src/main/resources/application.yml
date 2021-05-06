@@ -28,8 +28,9 @@ zuul:
   routes:
     fake-database-eureka-client:
       path: /fake-database/**
-      serviceId: fake-database-eureka-client
-      stripPrefix: true
+      url: https://fake-database-eureka-client.herokuapp.com/
+#      serviceId: fake-database-eureka-client
+#      stripPrefix: true
     get:
       path: /example/**
       url: https://www.example.com
