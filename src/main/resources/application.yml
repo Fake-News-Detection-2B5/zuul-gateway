@@ -1,0 +1,35 @@
+server:
+  port: 8662
+
+spring:
+  application:
+    name: zuul-gateway
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://gmatei.eu.auth0.com/
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      #defaultZone: http://localhost:8661/eureka
+      defaultZone: https://fake-news-eureka-server.herokuapp.com/
+  instance:
+    hostname: localhost
+
+zuul:
+  host:
+    connect-timeout-millis: 5000000
+    socket-timeout-millis: 5000000
+  ignored-services: '*'
+  routes:
+    fake-database-eureka-client:
+      path: /fake-database/**
+      serviceId: fake-database-eureka-client
+      stripPrefix: true
+
+#auth0:
+#  audience: https://fake-news-api.example.com
