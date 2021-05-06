@@ -30,6 +30,9 @@ zuul:
       path: /fake-database/**
       serviceId: fake-database-eureka-client
       stripPrefix: true
+    get:
+      path: /example/**
+      url: https://www.example.com
 
 #auth0:
 #  audience: https://fake-news-api.example.com
