@@ -4,11 +4,11 @@ server:
 spring:
   application:
     name: zuul-gateway
-#  security:
-#    oauth2:
-#      resourceserver:
-#        jwt:
-#          issuer-uri: https://gmatei.eu.auth0.com/
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://gmatei.eu.auth0.com/
 
 eureka:
   client:
@@ -35,5 +35,5 @@ zuul:
       path: /example/**
       url: https://www.example.com
 
-#auth0:
-#  audience: https://fake-news-api.example.com
+auth0:
+  audience: https://fake-news-api.example.com
