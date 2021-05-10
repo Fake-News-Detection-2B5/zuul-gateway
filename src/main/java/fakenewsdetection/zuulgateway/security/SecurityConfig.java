@@ -20,9 +20,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.oauth2ResourceServer().jwt();
         http.authorizeRequests()
-                .mvcMatchers("post/public").denyAll()
-//                .mvcMatchers("post/private").authenticated()
-//                .mvcMatchers("post/private-scoped").hasAuthority("SCOPE_read:messages")
+                .mvcMatchers("post/public").permitAll()
+                .mvcMatchers("post/private").authenticated()
+                .mvcMatchers("post/private-scoped").hasAuthority("SCOPE_read:messages")
                 .and().cors()
                 .and().oauth2ResourceServer().jwt();
     }
